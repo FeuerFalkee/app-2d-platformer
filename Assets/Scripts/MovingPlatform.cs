@@ -1,25 +1,33 @@
+// Bibliotheken importieren
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Klasse anlegen (erbt von Klasse MonoBehavior)
 public class MovingPlatform : MonoBehaviour
 {
+    // Eine AnimationCurve, die die Bewegung der Plattform beeinflusst
     public AnimationCurve curve;
 
-   Vector3 startPosition;
+    // Die Startposition der Plattform
+    Vector3 startPosition;
 
-   public float height = 1;
+    // Die Plattform kann folgende Höhe erreichen
+    public float height = 1;
 
-   public float speed = 1;
+    // Die Plattform bewegt sich mit folgender Geschwindigkeit
+    public float speed = 1;
 
+    // Am Anfang beträgt der Wert von 'startPosition', den Wert von 'transfor.position'
     void Start()
     {
         startPosition = transform.position;
     }
 
-    // Update is called once per frame
+    // Funktion, die bei jedem Frame ausgeführt wird
     void Update()
     {
-        transform.position = startPosition + new Vector3(0, curve. Evaluate(Time.time * speed) * height, 0);
+        // Die Position der Plattform wird berechnet
+        transform.position = startPosition + new Vector3(0, curve.Evaluate(Time.time * speed) * height, 0);
     }
 }
