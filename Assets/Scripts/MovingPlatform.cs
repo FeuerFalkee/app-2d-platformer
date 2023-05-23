@@ -18,7 +18,7 @@ public class MovingPlatform : MonoBehaviour
     // Die Plattform bewegt sich mit folgender Geschwindigkeit
     public float speed = 1;
 
-    // Am Anfang beträgt der Wert von 'startPosition', den Wert von 'transfor.position'
+    // Am Anfang beträgt der Wert von 'startPosition', den Wert von 'transform.position'
     void Start()
     {
         startPosition = transform.position;
